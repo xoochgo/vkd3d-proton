@@ -1,4 +1,4 @@
-name: Test Builds on Windows
+name: Test Builds on Windows+artifacts
 
 on: [push, pull_request, workflow_dispatch]
 
@@ -55,10 +55,10 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: vkd3d-proton-x86-dlls
-        path: build-msvc-x86/vkd3d-proton/Release/*.dll
+        path: build-msvc-x86/Release/*.dll
 
     - name: Upload x64 artifacts
       uses: actions/upload-artifact@v4
       with:
         name: vkd3d-proton-x64-dlls
-        path: build-msvc-x64/vkd3d-proton/Release/*.dll
+        path: build-msvc-x64/Release/*.dll
